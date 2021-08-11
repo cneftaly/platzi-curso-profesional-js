@@ -3,7 +3,7 @@
     <title>PlatziMediaPlayer</title>
     <link
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="./assets/index.css" />
   </head>
@@ -20,23 +20,9 @@
       </video>
 
       <button>Play/Pause</button>
+      <button>Mute/Unmute</button>
     </main>
 
-    <script>
-      const video = document.querySelector("video");
-      const button = document.querySelector("button");
-
-      function MediaPlayer(config) {
-        this.media = config.el;
-      }
-      
-      MediaPlayer.prototype.play = function() {
-        this.media.play();
-      }
-
-      // TODO: Agregar funcionalidad de pausa
-      const player = new MediaPlayer({el:video});
-      button.onclick = () => player.play();
-    </script>
+    <script type="module" src="./assets/index.js"></script>
   </body>
 </html>
